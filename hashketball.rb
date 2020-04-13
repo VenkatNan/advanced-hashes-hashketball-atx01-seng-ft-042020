@@ -4,7 +4,11 @@ def game_hash
 game_hash ={
   :home =>{
     :team_name => 'Brooklyn Nets',
+<<<<<<< HEAD
     :colors => ["Black","White"],
+=======
+    :colors => [" Black","White"],
+>>>>>>> b495ac81119e1a639042922468cb5a38854398a4
     :players =>[{player_name:"Alan Anderson" ,number:0,shoe:16,points:22 ,rebounds:12 ,assists:12 ,steals:3 ,blocks:1 ,slam_dunks:1 },
       {player_name:"Reggie Evans" ,number:30,shoe:14,points:12 ,rebounds:12 ,assists:12 ,steals:12 ,blocks:12 ,slam_dunks:7 },
       {player_name:"Brook Lopez" ,number:11,shoe:17,points:17 ,rebounds:19 ,assists:10 ,steals:3 ,blocks:1 ,slam_dunks:15 },
@@ -13,7 +17,11 @@ game_hash ={
   },
   :away =>{
     :team_name => 'Charlotte Hornets',
+<<<<<<< HEAD
     :colors => ["Turquoise","Purple"],
+=======
+    :colors => ["Turquoise"," Purple"],
+>>>>>>> b495ac81119e1a639042922468cb5a38854398a4
     :players =>[
       {player_name:"Jeff Adrien" ,number:4,shoe:18,points:10 ,rebounds:1 ,assists:1 ,steals:2 ,blocks:7 ,slam_dunks:2 },
       {player_name:"Bismack Biyombo" ,number:0,shoe:16,points:12 ,rebounds:4 ,assists:7 ,steals:22 ,blocks:15 ,slam_dunks:10 },
@@ -24,6 +32,7 @@ game_hash ={
   }
 }
 end
+<<<<<<< HEAD
 
 def num_points_scored(name)
   game_hash.each do |team, teamInfo|
@@ -43,6 +52,17 @@ def shoe_size (name)
       end
     end
   end
+=======
+def num_points_scored (player)
+  binding.pry
+  
+  if game_hash[:home][:players].include?(player)
+    game_hash[:home][:players][player][:points]
+  elsif game_hash[:away][:players].include?(player)
+  game_hash[:away][:players][player][:points]
+  end
+  game_hash[:home][:players][player][:points]
+>>>>>>> b495ac81119e1a639042922468cb5a38854398a4
 end
 
 def team_colors(team)
